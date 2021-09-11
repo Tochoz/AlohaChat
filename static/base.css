@@ -1,0 +1,60 @@
+div.container {
+    margin: 8px 8px 8px 8px;
+    border-radius: 70px;
+    border: white;
+}
+body {
+    background: -webkit-linear-gradient(to right, #30303f,#212121);
+    background: linear-gradient(to right, #30303f,#212121);
+    font-family: Arial;
+    font-size: 20px;
+    color: white;
+}
+body:hover {
+    cursor: default;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+
+}
+a.button {
+  background: -webkit-linear-gradient(152deg, #fb8a61,#f74d72,#d2089a,#7029c9);
+  background: linear-gradient(152deg, #fb8a61,#f74d72,#d2089a,#7029c9);
+  border: black;
+  border-radius: 3rem;
+  border-width: 10px;
+  color: white;
+  padding: 16px 48px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3em;
+    display: block;
+  align-self: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.title-big{
+    border-style: solid;
+    border:white;
+    border-width: .3em 0em 0em 0em;
+    font-size: 7em;
+    text-wrap: avoid;
+    text-align: center;
+}
+.title-intro{
+    font-family: RobotoM;
+;
+    border-style: solid;
+    border:white;
+    border-width: .3em 0em 0em 0em;
+    font-size: 7em;
+    text-wrap: avoid;
+    text-align: center;
+}
+.intro{
+    margin: 3.5em 0em 3em 0em;
+    text-align: center;
+}

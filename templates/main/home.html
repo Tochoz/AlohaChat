@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Чат
+{% endblock %}
+
+{% block content %}
+    <a href=#toggle class="menu-button">
+    <div class="menu-mid-line"></div>
+    <div class="menu-up-line"></div>
+    <div class="menu-down-line"></div>
+    </a>
+    <div class="chat-card">
+        <div class="messages-field">
+            {% for message in messages %}
+                <div class="message">
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <form action="{% url "send" %}" method="post">
+            {% csrf_token %}
+            <input class="form-field" name="content" type="text" placeholder="Введите сообщение" required>
+            <input type="submit" value="Отправить" class="send-button">
+        </form>
+    </div>
+    <div class="title">
+    Привет, {{ name }}, здесь скоро будет чат!
+    </div>
+{% endblock %}
