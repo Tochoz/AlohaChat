@@ -1,6 +1,9 @@
 from django.db import models
 from django.conf import settings
 
+class Name(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+
 class Message(models.Model):
     name = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
