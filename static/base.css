@@ -35,6 +35,10 @@ a.button {
   margin-left: 25%;
   margin-right: 25%;
   margin-bottom: 1em;
+    transition: font-size .4s;
+}
+a.button:hover{
+    font-size: 3.3em;
 }
 
 .title-big{
@@ -58,4 +62,47 @@ a.button {
 .intro{
     margin: 3.5em 0em 3em 0em;
     text-align: center;
+}
+
+.message {
+    display: block;
+    padding: .1em .5em .1em .5em;
+    border: #30303f;
+    border-radius: .3em;
+    border-width: 2px;
+    border-style: solid;
+    margin: .2em .0em .2em .0em;
+}
+
+.message-content {
+    display: block;
+    margin-top: .1em;
+    font-size: 1.3em;
+    margin-left: 1em;
+}
+
+.message-info {
+    display: block;
+    font-size: .9em;
+}
+
+input.form-field {
+    height: 1.5rem;
+    font-size: 1em;
+    margin-top: .4em;
+    border-radius: .3em;
+    width: 40%;
+
+}
+input.send-button {
+    height: 100%;
+    font-size: 1em;
+    border-radius: .3em;
+    margin-top: .4em;
+    border-style: outset;
+
+}
+input.send-button:hover {
+    background-color: #7d7da0;
+
 }

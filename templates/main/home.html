@@ -14,7 +14,8 @@
         <div class="messages-field">
             {% for message in messages %}
                 <div class="message">
-                    <p>{{ message }}</p>
+                    <div class="message-info">{{ message.info }}</div>
+                    <div class="message-content">{{ message.content }}</div>
                 </div>
             {% endfor %}
         </div>
@@ -25,7 +26,7 @@
         </form>
     </div>
     <div class="title">
-    Привет, {{ name }}, здесь скоро будет чат!
+    Привет, {{ name }}, здесь появляется чат😎😎!
     </div><a class="button" href="{% url 'mainpage' %}">На главную</a>
     <a class="button" href="{% url 'auth' %}">Сменить имя</a>
 {% endblock %}
