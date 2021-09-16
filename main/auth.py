@@ -11,7 +11,6 @@ def auth(request):
             name = request.POST['name']
             request.session['name'] = name
 
-
             try:
                 new_name = Name.objects.create(name=name)
                 new_name.save()

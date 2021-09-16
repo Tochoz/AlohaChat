@@ -11,7 +11,7 @@
         {% csrf_token %}
         <label>Имя</label>
         <input class="form-field" name="name" type="text" value="{% if request.session.name %}{{ request.session.name }}{% endif %}"
-               required>
+               required autofocus>
         <input value="Войти" type="submit" class="send-button">
         </form>
 {% endblock %}

@@ -17,7 +17,7 @@ def homepage(request):
         #name = request.GET['name']
         messages = []
         for message in Message.objects.all():
-            messages.append({'info': f"{message.name} {str(message.timestamp)[:-16]}:", 'content': message.content})
+            messages.append({'info': f"{message.name} {str(message.timestamp)[:-16]}", 'content': message.content})
         #print(f"messages: {messages}")
         name = request.session["name"]
         return render(request, 'main/home.html', {'name': name, "messages": messages})

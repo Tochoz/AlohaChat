@@ -21,7 +21,7 @@
         </div>
         <form action="{% url "send" %}" method="post">
             {% csrf_token %}
-            <input class="form-field" name="content" type="text" placeholder="Введите сообщение" required>
+            <input class="form-field" name="content" type="text" placeholder="Введите сообщение" required autofocus>
             <input type="submit" value="Отправить" class="send-button">
         </form>
     </div>
