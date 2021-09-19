@@ -1,23 +1,49 @@
-div.container {
-    margin: 8px 8px 8px 8px;
-    border-radius: 70px;
-    border: white;
+div.container{
+    position: inherit;
+    height: 100%;
 }
+
 body {
     background: -webkit-linear-gradient(to right, #30303f,#212121);
     background: linear-gradient(to right, #30303f,#212121);
     font-family: Arial;
     font-size: 20px;
+    margin: 0px;
     color: white;
+    size: inherit;
+    padding: 1em 0em 1em 0em;
+    height: 93%;
 }
+
+::-webkit-scrollbar {
+  width: .3em;
+}
+::-webkit-scrollbar-track {
+  background: #2b2b3b;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7d7da0;
+  border: 10px transparent solid;
+    border-radius: 5px;
+  /* change border color to blue to match the background */
+}
+
+html {
+    height: 100%;
+    min-width: 60rem;
+}
+
 body:hover {
     cursor: default;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 
 }
+
 a.button {
   background: -webkit-linear-gradient(152deg, #fb8a61,#f74d72,#d2089a,#7029c9);
   background: linear-gradient(152deg, #fb8a61,#f74d72,#d2089a,#7029c9);
@@ -37,8 +63,25 @@ a.button {
   margin-bottom: 1em;
     transition: font-size .4s;
 }
+
 a.button:hover{
     font-size: 3.3em;
+}
+
+a.nav-button {
+  background: -webkit-linear-gradient(152deg, #fb8a61,#f74d72,#d2089a,#7029c9);
+  background: linear-gradient(152deg, #fb8a61,#f74d72,#d2089a,#7029c9);
+  border: black;
+  border-radius: 3rem;
+  /*border-width: 10px;*/
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 1.5em;
+    display: block;
+    padding: .2em .5% .2em .5%;
 }
 
 .title-big{
@@ -48,10 +91,11 @@ a.button:hover{
     font-size: 7em;
     text-wrap: avoid;
     text-align: center;
+    align-content: center;
 }
+
 .title-intro{
     font-family: RobotoM;
-;
     border-style: solid;
     border:white;
     border-width: .3em 0em 0em 0em;
@@ -59,8 +103,9 @@ a.button:hover{
     text-wrap: avoid;
     text-align: center;
 }
+
 .intro{
-    margin: 3.5em 0em 3em 0em;
+    margin: 3.5em 0em 5em 0em;
     text-align: center;
 }
 
@@ -71,7 +116,8 @@ a.button:hover{
     border-radius: .3em;
     border-width: 2px;
     border-style: solid;
-    margin: .2em .0em .2em .0em;
+    margin: .2em .24em .2em .0em;
+    float: bottom;
 }
 
 .message-content {
@@ -87,22 +133,104 @@ a.button:hover{
 }
 
 input.form-field {
-    height: 1.5rem;
-    font-size: 1em;
+    font-size: 1.1em;
     margin-top: .4em;
-    border-radius: .3em;
+    border-radius: .4em;
     width: 40%;
+    margin: 0% 30% 0% 30%;
+    height: 2.5rem;
+    align-self: center;
+    padding-left: .8em;
 
 }
 input.send-button {
-    height: 100%;
+    display: block;
     font-size: 1em;
     border-radius: .3em;
-    margin-top: .4em;
     border-style: outset;
+    height: 2rem;
 
+    margin: .6em auto auto auto;
+    width: auto;
+    min-width: 100px;
 }
+
 input.send-button:hover {
     background-color: #7d7da0;
 
+}
+
+.chat-card {
+    position: inherit;
+    margin: 0em 10% 0em 10%;
+    display: block;
+    border: 1px solid aliceblue;
+    border-radius: 1em;
+    padding: 1em 1em 0em 1em;
+    size: inherit;
+    height: 100%;
+    float: bottom;
+}
+
+.messages-field {
+    border: 1px solid aliceblue;
+    border-radius: .6em;
+    align-self: center;
+    height: 80%;
+    padding: .3em;
+
+}
+
+.scrollarea{
+    size: inherit;
+    align-self: center;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    gap: 1em;
+}
+
+form{
+    display: block;
+    align-items: center;
+}
+
+.send-message-container {
+    display: flex;
+    margin-top: .8em;
+}
+
+.message-enter-field{
+    outline: none;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    flex: 9;
+    border: 2px solid #ffffff;
+    border-right-color: #1f1f2a;
+    border-radius: .6rem 0 0 .6rem;
+    padding-left: .5rem;
+}
+
+.send-message-button {
+    display: block;
+    flex: 1;
+    border: 1px solid #ffffff;
+    border-radius: 0 .6rem .6rem 0;
+    border-left: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #2b2b3b;
+    background-color: white;
 }

@@ -13,21 +13,24 @@
     <div class="menu-down-line"></div>
     </a>-->
     <div class="chat-card">
-        <div class="messages-field" id="content-area">
+        <div class="messages-field">
+        <div class="scrollarea" id="content-area">
             {% for message in messages %}
                 <div class="message">
                     <div class="message-info">{{ message.info }}</div>
                     <div class="message-content">{{ message.content }}</div>
                 </div>
             {% endfor %}
+        </div></div>
+        <div class="send-message-container">
+            <input class="message-enter-field" onkeyup="button_pressed(event)" name="content" type="text" placeholder="Введите сообщение" id="message-field" required autofocus>
+            <input type="button" onclick="send_message()" value="Отправить" class="send-message-button" id="send-form-button">
         </div>
-        <div>
-            <input class="form-field" onkeyup="button_pressed(event)" name="content" type="text" placeholder="Введите сообщение" id="message-field" required autofocus>
-            <input type="button" onclick="send_message()" value="Отправить" class="send-button" id="send-form-button">
+
+
+        <div class="nav-container">
+            <a class="nav-button" style="display: inline-block; align-self: flex-end; min-width: 7em" href="{% url 'mainpage' %}">На главную</a>
+            <a class="nav-button" style="display: inline-block; align-self: flex-end; min-width: 7em" href="{% url 'auth' %}">Сменить имя</a>
         </div>
     </div>
-    <div class="title">
-    Привет, {{ name }}, здесь появляется чат😎😎!
-    </div><a class="button" href="{% url 'mainpage' %}">На главную</a>
-    <a class="button" href="{% url 'auth' %}">Сменить имя</a>
 {% endblock %}

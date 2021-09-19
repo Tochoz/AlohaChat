@@ -41,7 +41,7 @@ class ChatConsumer(WebsocketConsumer):
                 'type': 'chat_message',
                 'name': username,
                 'message': message,
-                'time': timedate
+                'time': str(message_obj.timestamp)[:-16]
             }
         )
 
