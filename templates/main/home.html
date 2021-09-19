@@ -1,17 +1,19 @@
 {% extends 'main/base.html' %}
 
-{% block title %}
-Чат
+{% block meta %}
+    <title>Чат</title>
+    {{ name|json_script:"name" }}
+    <script src="/static/chat-script.js"></script>
 {% endblock %}
 
 {% block content %}
-    <a href=#toggle class="menu-button">
+    <!--<a href=#toggle class="menu-button">
     <div class="menu-mid-line"></div>
     <div class="menu-up-line"></div>
     <div class="menu-down-line"></div>
-    </a>
+    </a>-->
     <div class="chat-card">
-        <div class="messages-field">
+        <div class="messages-field" id="content-area">
             {% for message in messages %}
                 <div class="message">
                     <div class="message-info">{{ message.info }}</div>
@@ -19,11 +21,10 @@
                 </div>
             {% endfor %}
         </div>
-        <form action="{% url "send" %}" method="post">
-            {% csrf_token %}
-            <input class="form-field" name="content" type="text" placeholder="Введите сообщение" required autofocus>
-            <input type="submit" value="Отправить" class="send-button">
-        </form>
+        <div>
+            <input class="form-field" onkeyup="button_pressed(event)" name="content" type="text" placeholder="Введите сообщение" id="message-field" required autofocus>
+            <input type="button" onclick="send_message()" value="Отправить" class="send-button" id="send-form-button">
+        </div>
     </div>
     <div class="title">
     Привет, {{ name }}, здесь появляется чат😎😎!
