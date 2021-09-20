@@ -125,6 +125,10 @@ a.nav-button {
     margin-top: .1em;
     font-size: 1.3em;
     margin-left: 1em;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    max-width: 100%;
 }
 
 .message-info {
