@@ -118,6 +118,7 @@ a.nav-button {
     border-style: solid;
     margin: .2em .24em .2em .0em;
     float: bottom;
+    overflow-y: auto;
 }
 
 .message-content {
