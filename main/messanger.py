@@ -10,7 +10,7 @@ def send_message(request):
     message = Message.objects.create(name=name, content=content)
     message.save()
     #print(f"message: {payload} saved")
-    return redirect(reverse('home'))
+    return HttpResponse(status=200)
 
 def homepage(request):
     if 'name' in request.session:

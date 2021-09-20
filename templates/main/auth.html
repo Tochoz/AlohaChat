@@ -1,17 +1,21 @@
 {% extends 'main/base.html' %}
 
-{% block title %}
-Авторизация
+{% block meta %}
+    <title>Авторизация</title>
 {% endblock %}
 
 {% block content %}
+    <div class="container" style="overflow: hidden">
     <div class="title-big">Авторизация</div>
         <p class="intro">Введите ваше имя для входа в чат.</p>
         <form method="post" action="{% url 'auth' %}">
         {% csrf_token %}
-        <label>Имя</label>
         <input class="form-field" name="name" type="text" value="{% if request.session.name %}{{ request.session.name }}{% endif %}"
-               required autofocus>
-        <input value="Войти" type="submit" class="send-button">
+               required autofocus><br>
+        <div style="display: block; text-align: center">
+            <input value="Войти" type="submit" class="send-button">
+        </div>
         </form>
+
+    </div>
 {% endblock %}
